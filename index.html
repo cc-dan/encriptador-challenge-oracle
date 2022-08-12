@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <title>Encriptador</title>
+    </head>
+    <body>
+        <div id="ventana">
+            <img id="logo" src="assets/alura-logo.png" alt="logo de alura">
+
+            <div id="container">
+                <div id="container-entrada">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+                    <div>
+                        <div id="alerta"><img src="assets/alerta.png" alt="símbolo de alerta"><p>Solo letras minúsculas y sin acentos</p></div>
+                        <div class="botones">
+                            <button onclick="encriptador(document.querySelector('textarea').value, false)">Encriptar</button>
+                            <button class="secundario" onclick="encriptador(document.querySelector('textarea').value, true)">Desencriptar</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="container-salida">
+                    <p id="encriptador"></p>
+                    <div id="salida">
+                        <div id="placeholder">
+                            <img src="assets/Muñeco.png" alt="personaje agachado con una lupa">
+                            <h3>Ningún mensaje fue encontrado</h3>
+                            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                        </div>
+                    </div>
+                    <div><button class="secundario" id="copiar" onclick="copiar(document.getElementById('encriptador').textContent)">Copiar</button></div>
+                </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

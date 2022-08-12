@@ -1,0 +1,169 @@
+/*div {
+    border: 1px solid red;
+}*/
+
+#logo {
+    margin-left: 40px;
+}
+
+#ventana {
+    width: auto;
+    
+    padding: 40px;
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    min-height: 600px;
+    max-height: 1080px;
+    
+    margin-top: 20px;
+    margin-left: 240px;
+}
+
+#container-entrada {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+
+    position: relative;
+    padding-bottom: 32px;
+}
+
+#container-salida {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+
+    position: relative;
+    padding: 32px calc(10% - 1em);
+
+    text-align: center;
+    background-color: white;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+#salida {
+    /* arriba horizontal abajo */
+    margin: auto /*auto 30px*/;
+}
+
+#encriptador {
+    margin: 0;
+
+    text-align: left;
+    font-size: 1.5em;
+}
+
+#container-salida img {
+    display: block;
+    margin: 0 auto;
+
+    width: 80%;
+    height: auto;
+}
+
+textarea {
+    width: 100%;
+
+    background: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 2em;
+    color: #0A3871;
+}
+
+body {
+    background-color: #F3F5FC;
+    font-family: 'Open Sans', sans-serif;
+}
+
+button {
+    max-width: 328px;
+    width: 100%;
+    height: 67px;
+
+    background: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: white;
+    transition: 200ms background;
+}
+
+button:hover {
+    background: #06274e;
+}
+
+button:active {
+    background: #06274e;
+}
+
+.secundario {
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+
+.secundario:hover {
+    background: #8b9dbe;
+}
+
+.secundario:active {
+    background: #8b9dbe;
+}
+
+#alerta {
+    display: flex;
+    align-items: center;
+}
+
+#alerta img {
+    margin-right: 0.5em;
+}
+
+#copiar {
+    display: none;
+}
+
+h1, h2, h3 {
+    color: #343A40;
+}
+
+p {
+    color: #495057;
+}
+
+@media only screen and (max-width:1300px) {
+    #container {
+        margin-left: 0;
+    }
+
+    #botones {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    #container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #botones {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 428px) {
+    #botones {
+        flex-direction: column;
+    }
+}
