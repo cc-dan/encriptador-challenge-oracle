@@ -6,8 +6,19 @@ const diccionario = {
     'u' : 'ufat'
 }
 
+const caracteres_especiales = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?áéíóú]+/
+
 function encriptador(entrada, desencriptar) {
-    entrada = entrada.toLowerCase();
+    if (caracteres_especiales.test(entrada)) {
+        alert("Los caracteres especiales y letras con acentos no están permitidas.")
+
+        return;
+    }
+    if ( !(entrada === entrada.toLowerCase()) ) {
+        alert("Se encontraron letras mayúsculas en el mensaje. Va a ser modificado.");
+        entrada = entrada.toLowerCase();
+    }
+    
     let salida = "";
 
     for (let x = 0; x < entrada.length; x++) {
